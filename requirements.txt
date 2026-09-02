@@ -1,0 +1,40 @@
+# Dependencies for JARVIS / ECHO Desktop AI Voice Assistant
+# Compatible with Python 3.11 and Python 3.12 on Windows
+
+# Wake-word detection (Picovoice)
+pvporcupine>=3.0.0
+
+# Speech recognition & audio stream capture
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.14
+
+# Text-to-speech engines
+edge-tts>=6.1.9
+pyttsx3>=2.90
+pygame>=2.5.2
+
+# System tray & GUI utilities
+pystray>=0.19.5
+Pillow>=10.2.0
+# GUI Overlay: Built-in Python Tkinter (standard library, no extra pip packages required)
+
+
+# System info & OS automation
+psutil>=5.9.8
+pyautogui>=0.9.54
+requests>=2.31.0
+PyYAML>=6.0.1
+pywhatkit>=5.4
+
+# LLM Fallback & Environment security
+python-dotenv>=1.0.0
+google-generativeai>=0.8.0
+
+# Local Semantic Intent Classification (Sentence Embeddings)
+sentence-transformers>=2.2.2
+
+
+# Spotify Web API Integration
+spotipy>=2.23.0
+
+

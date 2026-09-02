@@ -1,0 +1,35 @@
+# Python environment & pycache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variables, credentials & secret caches
+.env
+.env.local
+.env.*
+!.env.example
+.cache
+.cache-*
+.spotify_cache
+*.ppn
+*.key
+*.pem
+
+# Build & Executable Artifacts
+build/
+dist/
+*.spec
+
+# Logs & Temporary files
+logs/
+*.log
+*.tmp
+venv activation cmd.txt
+to update packgae .txt
+
+

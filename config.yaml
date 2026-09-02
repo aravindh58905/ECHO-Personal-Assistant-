@@ -1,0 +1,104 @@
+# Configuration file for Personal Desktop AI Assistant (JARVIS / ECHO)
+
+assistant:
+  name: "ECHO"
+  user_honorific: "boss"  # Options: "boss", "sir", "ma'am"
+
+picovoice:
+  # Get a free AccessKey at https://console.picovoice.ai/
+  access_key: ""
+  
+  # Built-in Porcupine keywords for Windows include:
+  # "jarvis", "computer", "alexa", "porcupine", "bumblebee", "terminator"
+  # Defaulting to "jarvis" because "friday" is NOT a built-in Porcupine keyword.
+  wake_word: "echo"
+  
+  # If you train a custom keyword (e.g., friday_windows.ppn) on Picovoice Console,
+  # set the path below:
+  custom_wake_word_path: ""
+  
+  # Sensitivity (0.0 to 1.0) higher means more sensitive but more false positives
+  sensitivity: 0.5
+
+tts:
+  # Engine selection: "edge-tts" (High quality neural voice, online) or "pyttsx3" (Offline fallback)
+  engine: "edge-tts"
+  
+  # Preferred edge-tts neural voice (e.g. en-US-ChristopherNeural, en-GB-RyanNeural, en-US-AriaNeural)
+  voice: "en-US-ChristopherNeural"
+  
+  # Speed / volume adjustments for edge-tts
+  rate: "+0%"
+  volume: "+0%"
+
+audio:
+  # SpeechRecognition energy threshold adjustment
+  energy_threshold: 300
+  dynamic_energy_threshold: true
+  phrase_time_limit: 10
+  timeout: 5
+
+apps:
+  chrome: "chrome"
+  vscode: "code"
+  code: "code"
+  spotify: "spotify"
+  notepad: "notepad"
+  calculator: "calc"
+  cmd: "cmd"
+  explorer: "explorer"
+
+phone_control:
+  enabled: true
+  adb_path: "adb"  # assumes adb is in system PATH; set full path (e.g. "C:\\platform-tools\\adb.exe") if not
+  phone_apps:
+    instagram: "com.instagram.android"
+    whatsapp: "com.whatsapp"
+    youtube: "com.google.android.youtube"
+    camera: "com.android.camera"
+    chrome: "com.android.chrome"
+    photos: "com.google.android.apps.photos"
+    gallery: "com.google.android.apps.photos"
+    maps: "com.google.android.apps.maps"
+    spotify: "com.spotify.music"
+
+whatsapp:
+  enabled: true
+  contacts:
+    mom: "+91XXXXXXXXXX"
+    dad: "+91XXXXXXXXXX"
+    ragul: "+91XXXXXXXXXX"
+  wait_time: 10  # seconds to wait for WhatsApp Web to load before sending
+
+
+media:
+  # Number of volume-up / volume-down key presses per voice command
+  volume_step: 4
+
+conversation:
+  # Re-enter listening mode after response without needing wake word
+  follow_up_enabled: true
+  follow_up_timeout_seconds: 8
+
+gemini:
+  # Gemini API model name (API key is stored safely in .env)
+  model: "gemini-3.5-flash"
+
+screen_vision:
+  enabled: true
+
+intent_classification:
+  enabled: true
+  confidence_threshold: 0.65
+
+
+gui:
+  enabled: true
+  position: "bottom_right"  # Options: "bottom_right", "bottom_left", "top_right", "top_left"
+  color_theme: "blue"
+  opacity: 0.92
+  always_on_top: true
+
+memory:
+  enabled: true
+  file_path: "memory.json"
